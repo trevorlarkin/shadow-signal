@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow Signal - Division 88</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>DIVISION 88 // Analyst Terminal</h1>
+        <p>Day: <span id="day">1</span> | Actions Remaining: <span id="actions">3</span></p>
+    </div>
+    <div id="main">
+        <div id="left-panel">
+            <h2>Data Feeds</h2>
+            <button onclick="loadData('access')">Access Logs</button>
+            <button onclick="loadData('email')">Email Metadata</button>
+            <button onclick="loadData('expenses')">Expenses</button>
+            <button onclick="loadData('interviews')">Interview Notes</button>
+            <pre id="data-display">Select a data type to begin...</pre>
+        </div>
+        <div id="right-panel">
+            <h2>Case File</h2>
+            <div id="case-file">
+                <p>Track your suspicions here.</p>
+                <textarea id="notes" placeholder="Type your notes here..."></textarea>
+            </div>
+            <button onclick="endTurn()">End Turn</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

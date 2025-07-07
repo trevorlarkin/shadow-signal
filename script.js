@@ -37,6 +37,29 @@ Jason Torres - External Hard Drive (256GB) - $189.99 - PENDING`,
 };
 day3: {
         access: `ACCESS LOG - DAY 3
+        day3: {
+        access: `ACCESS LOG - DAY 3
+----------------------------------------
+Aug 12, 03:12 - Jason Torres - Archive Room
+Aug 12, 03:13 - ACCESS ERROR - Clearance Override Triggered
+Aug 12, 07:40 - Rachel Corbin - Server Room
+Aug 12, 07:58 - Cynthia Rhee - Archive Room (entry logged, no exit)`,
+        email: `EMAIL METADATA - DAY 3
+----------------------------------------
+Aug 12, 06:12 AM - Cynthia -> External - "They’re closing in"
+Aug 12, 08:04 AM - Internal Alert - SYSTEM BREACH / Clearance Override / Investigating...
+Aug 12, 08:39 AM - Lamont -> Self - "Encrypted dump scheduled for 9" `,
+        expenses: `EXPENSE REPORT - DAY 3
+----------------------------------------
+Marcus Penn - Reimbursement: $4,312 - "Technical conference, Romania" - FLAGGED AS FRAUD
+Rachel Corbin - Gift card request (no receipt) - $500 - FLAGGED`,
+        interviews: `INTERVIEW NOTES - DAY 3
+----------------------------------------
+"Torres denies being in Archive Room — badge contradicts."
+"Rhee unreachable since 8:00 AM. Comms silent."
+"Corbin says 'we were all just doing our jobs.'"
+"Lamont evasive. Repeated 'don’t dig too deep into override logs.'" `
+    },
 let day = 1;
 let actionsRemaining = 3;
 let toolsUsed = [];

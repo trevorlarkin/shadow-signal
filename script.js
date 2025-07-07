@@ -75,10 +75,6 @@ function loadData(type) {
 }
 
 function useTool(tool) {
-    if (actionsRemaining <= 0) {
-        alert("No actions remaining. End your turn.");
-        return;
-    }
     if (toolsUsed.includes(tool)) {
         alert("Tool already used today.");
         return;
@@ -98,7 +94,6 @@ function useTool(tool) {
     }
 
     toolsUsed.push(tool);
-    actionsRemaining -= 1;
     updateStats();
 
     const display = document.getElementById("data-display");

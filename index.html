@@ -26,12 +26,51 @@
         <div id="right-panel">
             <h2>Case File</h2>
             <div id="case-file">
-                <p>Track your suspicions here.</p>
-                <textarea id="notes" placeholder="Type your notes here..."></textarea>
+                <div class="suspect" data-name="Cynthia Rhee">
+                    <strong>Cynthia Rhee</strong>
+                    <label>Suspicion (1–5):</label>
+                    <input type="range" min="1" max="5" value="1" class="suspicion-slider">
+                    <textarea placeholder="Notes on Cynthia..."></textarea>
+                </div>
+                <div class="suspect" data-name="Marcus Penn">
+                    <strong>Marcus Penn</strong>
+                    <label>Suspicion (1–5):</label>
+                    <input type="range" min="1" max="5" value="1" class="suspicion-slider">
+                    <textarea placeholder="Notes on Marcus..."></textarea>
+                </div>
+                <div class="suspect" data-name="Rachel Corbin">
+                    <strong>Rachel Corbin</strong>
+                    <label>Suspicion (1–5):</label>
+                    <input type="range" min="1" max="5" value="1" class="suspicion-slider">
+                    <textarea placeholder="Notes on Rachel..."></textarea>
+                </div>
+                <div class="suspect" data-name="Eric Lamont">
+                    <strong>Eric Lamont</strong>
+                    <label>Suspicion (1–5):</label>
+                    <input type="range" min="1" max="5" value="1" class="suspicion-slider">
+                    <textarea placeholder="Notes on Eric..."></textarea>
+                </div>
+                <div class="suspect" data-name="Jason Torres">
+                    <strong>Jason Torres</strong>
+                    <label>Suspicion (1–5):</label>
+                    <input type="range" min="1" max="5" value="1" class="suspicion-slider">
+                    <textarea placeholder="Notes on Jason..."></textarea>
+                </div>
             </div>
+            <h2>Final Accusation</h2>
+            <select id="accuse-select">
+                <option value="">--Select Suspect--</option>
+                <option value="Cynthia Rhee">Cynthia Rhee</option>
+                <option value="Marcus Penn">Marcus Penn</option>
+                <option value="Rachel Corbin">Rachel Corbin</option>
+                <option value="Eric Lamont">Eric Lamont</option>
+                <option value="Jason Torres">Jason Torres</option>
+            </select>
+            <button onclick="makeAccusation()">Accuse</button>
+            <div id="verdict" style="margin-top: 10px;"></div>
             <button onclick="endTurn()">End Turn</button>
         </div>
     </div>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>

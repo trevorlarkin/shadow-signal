@@ -33,11 +33,8 @@ Jason Torres - External Hard Drive (256GB) - $189.99 - PENDING`,
 ----------------------------------------
 "Lamont claims he was approached to 'test internal comms firewall.'"
 "Torres asked if surveillance includes non-verbal facial scans."`
-    }
-};
-day3: {
-        access: `ACCESS LOG - DAY 3
-        day3: {
+    },
+    day3: {
         access: `ACCESS LOG - DAY 3
 ----------------------------------------
 Aug 12, 03:12 - Jason Torres - Archive Room
@@ -48,7 +45,7 @@ Aug 12, 07:58 - Cynthia Rhee - Archive Room (entry logged, no exit)`,
 ----------------------------------------
 Aug 12, 06:12 AM - Cynthia -> External - "They’re closing in"
 Aug 12, 08:04 AM - Internal Alert - SYSTEM BREACH / Clearance Override / Investigating...
-Aug 12, 08:39 AM - Lamont -> Self - "Encrypted dump scheduled for 9" `,
+Aug 12, 08:39 AM - Lamont -> Self - "Encrypted dump scheduled for 9"`,
         expenses: `EXPENSE REPORT - DAY 3
 ----------------------------------------
 Marcus Penn - Reimbursement: $4,312 - "Technical conference, Romania" - FLAGGED AS FRAUD
@@ -58,8 +55,10 @@ Rachel Corbin - Gift card request (no receipt) - $500 - FLAGGED`,
 "Torres denies being in Archive Room — badge contradicts."
 "Rhee unreachable since 8:00 AM. Comms silent."
 "Corbin says 'we were all just doing our jobs.'"
-"Lamont evasive. Repeated 'don’t dig too deep into override logs.'" `
-    },
+"Lamont evasive. Repeated 'don’t dig too deep into override logs.'"`
+    }
+};
+
 let day = 1;
 let actionsRemaining = 3;
 let toolsUsed = [];
@@ -121,4 +120,20 @@ function endTurn() {
     toolsUsed = [];
     updateStats();
     document.getElementById("data-display").textContent = "Day " + day + " begins. Select a data type.";
+}
+
+function makeAccusation() {
+    const selected = document.getElementById("accuse-select").value;
+    const verdict = document.getElementById("verdict");
+    if (!selected) {
+        verdict.textContent = "Select a suspect to accuse.";
+        return;
+    }
+
+    const mole = "Cynthia Rhee"; // Set the correct mole here
+    if (selected === mole) {
+        verdict.textContent = `✅ You were right. ${mole} was the mole. Case closed.`;
+    } else {
+        verdict.textContent = `❌ Incorrect. ${selected} was not the mole. The leak continues...`;
+    }
 }

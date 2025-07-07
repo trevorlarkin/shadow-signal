@@ -35,7 +35,8 @@ Jason Torres - External Hard Drive (256GB) - $189.99 - PENDING`,
 "Torres asked if surveillance includes non-verbal facial scans."`
     }
 };
-
+day3: {
+        access: `ACCESS LOG - DAY 3
 let day = 1;
 let actionsRemaining = 3;
 let toolsUsed = [];
@@ -88,7 +89,7 @@ function updateStats() {
 }
 
 function endTurn() {
-    if (day >= 2) {
+    if (day >= 3) {
         alert("This is the last available day in demo.");
         return;
     }
